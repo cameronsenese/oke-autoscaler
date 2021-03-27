@@ -410,7 +410,7 @@ Result: {
         "reason": "no-resource-pressure", 
         "node-pool-name": "prod-pool1", 
         "node-pool-status": "ready", 
-        "node-count": "2" 
+        "node-count": "2.0" 
     } 
 } 
 ```
@@ -424,7 +424,7 @@ Result: {
         "node-pool-name": "prod-pool1", 
         "node-pool-status": "stabilizing", 
         "unschedulable-pods-count": "4.0",
-        "node-count": "2" 
+        "node-count": "2.0" 
     } 
 } 
 ```
@@ -438,7 +438,7 @@ Result: {
         "unschedulable-pods-count": "10.0", 
         "node-pool-name": "prod-pool1", 
         "node-pool-status": "ready", 
-        "node-count": "3" 
+        "node-count": "3.0" 
     } 
 }
 ```
@@ -452,7 +452,7 @@ Result: {
         "unschedulable-pods-count": "10.0", 
         "node-pool-name": "prod-pool1", 
         "node-pool-status": "ready", 
-        "node-count": "3" 
+        "node-count": "3.0" 
     } 
 } 
 ```
@@ -465,7 +465,7 @@ Result: {
         "reason": "cpu", 
         "node-pool-name": "prod-pool1", 
         "node-pool-status": "ready", 
-        "node-count": "3" 
+        "node-count": "3.0" 
     } 
 }
 ```
