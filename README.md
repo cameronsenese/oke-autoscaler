@@ -26,9 +26,9 @@ The autoscaler function is implemented as an Oracle Function (i.e. an OCI manage
  - the Oracle Function itself is written in Python: [oke-autoscaler/func.py]( /oke-autoscaler/func.py)
  - the function uses a custom container image based on oraclelinux:7-slim, and also includes  rh-python36, the OCI CLI, and kubectl: [oke-autoscaler/Dockerfile]( /oke-autoscaler/dockerfile)
 
-![alt text](images/oke-autoscaler-function-timeline-v0.01.png "OKE-Autoscaler Function: Timeline View")
-
 ### Evaluation Logic
+<img src="images/oke-autoscaler-function-component-v0.01.png" alt="alt text" title="OKE-Autoscaler Function: Component View" style="zoom:75%;" />
+
 When the function is invoked, it follows an order of operation as follows:
 
 1. evaluates the state of the node pool, to ensure that the node pool is in a stable condition
@@ -39,6 +39,8 @@ When the function is invoked, it follows an order of operation as follows:
 ### Scheduling
 The autoscaler function is designed to be invoked on a recurring schedule.
 The periodicity by which the function is scheduled to be invoked is configurable. As a starting point, consider scheduling the autoscaler function to be invoked at an interval of every 3 minutes.
+
+![alt text](images/oke-autoscaler-function-timeline-v0.01.png "OKE-Autoscaler Function: Timeline View")
 
 Once invoked, the function will run in accordance with the [Evaluation Logic](##Evaluation Logic) described herein.
 
