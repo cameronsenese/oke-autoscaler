@@ -27,7 +27,9 @@ The autoscaler function is implemented as an Oracle Function (i.e. an OCI manage
  - the function uses a custom container image based on oraclelinux:7-slim, and also includes  rh-python36, the OCI CLI, and kubectl: [oke-autoscaler/Dockerfile]( /oke-autoscaler/dockerfile)
 
 ### Evaluation Logic
-<img src="images/oke-autoscaler-function-component-v0.01.png" alt="alt text" title="OKE-Autoscaler Function: Component View" style="zoom:75%;" />
+The autoscaler function interacts with the Kubernetes API and a number of OCI control plane APIs to evaluate the state of the cluster and target node pool.
+
+![alt text](images/oke-autoscaler-function-component-v0.01.png "OKE-Autoscaler Function: Component View")
 
 When the function is invoked, it follows an order of operation as follows:
 
