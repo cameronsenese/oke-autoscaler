@@ -46,7 +46,8 @@ The periodicity by which the function is scheduled to be invoked is configurable
 
 Once invoked, the function will run in accordance with the [Evaluation Logic](##Evaluation Logic) described herein.
 
-A dimension to consider is the length of the window of time that the function will use to calculate the average resource utilization in the node pool.
+##### Evaluation Window
+A dimension to consider when configuring scheduling is the length of the window of time that the function will use to calculate the average resource utilization in the node pool.
 
 The cluster administrator assigns a value to the function custom configuration parameter `node_pool_eval_window`.
 The autoscaler function implements `node_pool_eval_window` as the number of minutes over which to:
